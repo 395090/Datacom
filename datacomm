@@ -1,0 +1,193 @@
+Werkproces 1: 
+
+Wat komt erin voor? 
+
+OSPF, VLANS, ACL, IP DHCP, VTP 
+
+ 
+
+📡 Algemene commando’s 
+
+Commando 
+
+Wat het doet 
+
+show running-config 
+
+Toont de huidige configuratie in RAM (live config) 
+
+show startup-config 
+
+Toont de opgeslagen configuratie in NVRAM 
+
+show version 
+
+Informatie over het apparaat (IOS-versie, uptime) 
+
+show interfaces 
+
+Gedetailleerde status van alle interfaces 
+
+show ip interface brief 
+
+Overzicht van IP-adressen en interface-status 
+
+show mac-address-table 
+
+Laat MAC-adrestabel zien op switches 
+
+show arp 
+
+Toont ARP-tabel 
+
+show history 
+
+Toont recente commando’s die je hebt gebruikt 
+
+ 
+
+🌐 IP & Routing 
+
+Commando 
+
+Wat het doet 
+
+show ip route 
+
+Toont de routing table 
+
+show ip protocols 
+
+Toont gebruikte routingprotocollen (zoals RIP, OSPF) 
+
+show ip ospf neighbor 
+
+Laat OSPF-buren zien 
+
+show ip rip database 
+
+Laat RIP-routing database zien 
+
+ 
+
+🔐 Security en VLAN’s 
+
+Commando 
+
+Wat het doet 
+
+show vlan brief 
+
+Toont VLAN-instellingen op een switch 
+
+show interfaces trunk 
+
+Laat trunk-poorten zien 
+
+show port-security 
+
+Toont algemene poortbeveiliging info 
+
+show port-security interface <iface> 
+
+Details over poortbeveiliging op een interface 
+
+ 
+
+ 
+
+ 
+
+OSPF 
+
+Commando's: 
+
+Router ospf 1 
+
+Default-information originate 
+
+Network 'ip address' 'Wild card mask' area 0 
+
+Passive interface 
+
+VLANS 
+
+Commando's 
+
+Vlan 'getal' 
+
+Name  
+
+Interface 'port' 
+
+Switchport mode acces 
+
+Switchport acces vlan 'getal' 
+
+Switchport mode acces 
+
+Switchport mode trunk 
+
+ACL 
+
+Commando's 
+
+access-list 10 permit 192.168.1.0 0.0.0.255 
+
+access-list 10 deny any 
+
+interface FastEthernet0/0 
+
+ip access-group 10 in 
+
+access-list 110 permit tcp 192.168.1.0 0.0.0.255 any eq 80 
+
+access-list 110 deny ip any any 
+
+interface FastEthernet0/1 
+
+ip access-group 110 out 
+
+IP DHCP 
+
+Commando's 
+
+Ip dhcp excluded-address  
+
+Ip dhcp pool 'name' 
+
+Ip domain-name 
+
+VTP 
+
+vtp mode server 
+
+vtp mode client 
+
+vtp mode transparent 
+
+Vtp domain 'name' (op alle switches moeten hetzelfde zijn) 
+
+Vtp password 'password' 
+ 
+
+ 
+
+Werkproces 2 
+
+Tekening maken van de cloud  
+
+Commando's: 
+
+Show lldp neighbours 
+
+Show arp 
+
+Ssh –l 'name' 'ip address' 
+
+ 
+
+Het Testen van de apparaten: 
+
+
+ 
